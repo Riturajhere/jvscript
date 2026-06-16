@@ -1,8 +1,46 @@
-let obj1 ={
+let obj1 ={  //singleton object
     name:"Rituraj",
     age:21,
-    wt:81.12
+    wt:81.12,
+    fullname: { //nesting of objects
+        Username: "rituraj3314shukla",
+        pass:"Iambatman@3314"
+    }
 };
+
+
+console.log(obj1.fullname.username);  //chaining for nested objects
+const obj = {};  //Non singleton object
+
+// Add
+obj.newProp = "value";
+obj["another"] = 123;
+
+// Update
+obj.newProp = "changed";
+
+// Delete
+delete obj.another;
+
+// Freeze (prevents any changes)
+Object.freeze(obj);
+obj.newProp = "won't work";  // Silent fail in non-strict mode
+
+// Seal (can modify existing, can't add/delete)
+Object.seal(obj);
+
+
+//combining objects
+
+const obj3= Object.assign({},obj1,obj)
+console.log((obj3));
+
+//get keys
+
+console.log(Object.keys(obj1));
+console.log(Object.values(obj1));
+
+
 
 
 // console.log(obj1);
@@ -22,6 +60,9 @@ let obj1 ={
 
 
 //arrays : 
+
+
+
 // const fruits = ["apple", "banana", "orange"];
 // const numbers = [1, 2, 3, 4, 5];
 // const mixed = [1, "hello", true, null];
