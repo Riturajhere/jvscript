@@ -18,4 +18,4 @@
 function calculate(val1,...num1)  {     // "..." is REST operator , gives the rest of the values  
     return num1 
 }
-console.log(calculate(200,400,500));
+console.log(calculate(200,400,500)) ;
